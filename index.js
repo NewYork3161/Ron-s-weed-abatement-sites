@@ -15,8 +15,8 @@ mongoose.connect(DB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => console.log('✅ Connected to MongoDB Atlas'))
-.catch((err) => console.error('❌ MongoDB connection error:', err));
+  .then(() => console.log('✅ Connected to MongoDB Atlas'))
+  .catch((err) => console.error('❌ MongoDB connection error:', err));
 
 // ✅ Middleware
 app.use(morgan('dev'));
@@ -27,6 +27,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ✅ View engine setup
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+// ✅ Google Site Verification Meta Tag Middleware
+app.use((req, res, next) => {
+  res.locals.googleSiteVerification = `<meta name="google-site-verification" content="OPmlDIv4oCX1O0eNx3wNP7K-rHuVcF5NJnMxXJw0Jc4" />`;
+  next();
+});
 
 // ✅ Page Routes
 app.get('/', (req, res) => {
@@ -45,6 +51,11 @@ app.get('/confirmation', (req, res) => {
   res.render('email_confirmation', { title: 'Email Sent | Bower Company' });
 });
 
+// ✅ Sitemap XML Route
+app.get('/sitemap.xml', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'sitemap.xml'));
+});
+
 // ✅ Handle Contact Form Submission
 app.post('/send-email', async (req, res) => {
   const { name, email, message } = req.body;
@@ -53,7 +64,7 @@ app.post('/send-email', async (req, res) => {
     service: 'gmail',
     auth: {
       user: 'hudsonriver4151@gmail.com',
-      pass: 'nrauproepfuyltvu' // Use actual Gmail App Password (not .env)
+      pass: 'nrauproepfuyltvu' // Gmail App Password (don't expose in public code)
     }
   });
 
