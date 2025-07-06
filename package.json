@@ -1,19 +1,47 @@
 {
   "name": "ronssite",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ron’s Weed Abatement Website – built with Express, EJS, Mongoose, and MongoDB",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NewYork3161/Ron-s-weed-abatement-site.git"
+  },
+  "keywords": [
+    "weed-abatement",
+    "landscaping",
+    "express",
+    "ejs",
+    "mongoose",
+    "mongoDB",
+    "ron",
+    "site"
+  ],
+  "author": "Ron",
+  "license": "MIT",
   "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NewYork3161/Ron-s-weed-abatement-site/issues"
+  },
+  "homepage": "https://github.com/NewYork3161/Ron-s-weed-abatement-site#readme",
   "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.0.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "express-session": "^1.18.1",
-    "method-override": "^3.0.0"
+    "method-override": "^3.0.0",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.1",
+    "morgan": "^1.10.0",
+    "multer": "^2.0.1",
+    "nodemailer": "^7.0.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+ 
+  /* Fixed Navbar Styling */
+  .navbar {
+    background-color: #f8f9fa;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-brand,
+  .nav-link {
+    color: black !important;
+    font-weight: bold;
+  }
+
+  .nav-link:hover {
+    background-color: #ffd700;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .logo-img {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+  }
+
+  /* Hero Image Section */
+  .hero-section {
+    height: 100vh;
+    width: 100%;
+    margin-top: 75px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Middle Paragraph Section */
+  .middle-paragraph-section {
+    background-color: #ffffff;
+    padding: 2rem 1.25rem;
+    border-radius: 0px;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #000000;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .middle-paragraph-section p {
+    margin-bottom: 0.75rem;
+  }
+
+  /* Light Footer (Default) */
+  footer {
+    background-color: #f8f9fa;
+    color: black;
+    font-size: 1rem;
+    border-top: 1px solid #ddd;
+  }
+
+  footer a:hover {
+    color: #ffd700;
+    text-decoration: none;
+  }
+
+  /* Green Footer Styling (Overrides Default Footer) */
+  .green-footer {
+    background-color: #008000;
+    color: white;
+    padding: 80px 20px 40px;
+    text-align: center;
+  }
+
+  .green-footer h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 900;
+  }
+
+  .green-footer .locations {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #c4f0c4;
+  }
+
+  .green-footer .description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  .green-footer .phone-number {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 50px;
+  }
+
+  .green-footer .footer-bottom {
+    font-size: 0.9rem;
+    color: #ddd;
+    margin-top: 40px;
+  }
+  .greenbox{
+
+background-color: #008000;
+    width: 100%;
+    height: 50px;
+
+  }
+
+  @media (max-width: 600px) {
+    .green-footer h1 {
+      font-size: 2rem;
+    }
+
+    .green-footer .phone-number {
+      font-size: 1.5rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Navbar -->
+  <nav class="navbar navbar-expand-lg px-4">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="/">
+        <img src="/Logo/LogoPageOne.png" alt="Logo" class="logo-img">
+        Bower Company, Weed Abatement
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <img src="/images/tractor_image_home_page.png" class="img-fluid hero-img" alt="Hero Tractor Image">
+  </section>
+  <p class="greenbox"></p>
+  <!-- Middle Paragraph Section -->
+ <section class="middle-paragraph-section">
+  <div class="container">
+    <p>
+      For over 20 years, <strong>Bower Company</strong> has specialized in professional weed control and vegetation management in Contra Costa County, Walnut Creek, and Sacramento. We utilize modern equipment, such as forestry mulchers and compact excavators, to assist property owners in clearing overgrowth, reducing the risk of wildfires, and adhering to local codes.
+    </p>
+
+    <p>
+      However, we don't just focus on fire safety; our work enhances your property's appearance, increases its value, and promotes long-term environmental health. Whether you have a rural lot, hillside land, or a commercial property, our team is here to provide clean, safe, and dependable results. Choosing Bower Company means you're picking a team with experience you can trust to help protect what matters to you.
+    </p>
+  </div>
+</section>
+
+
+  <!-- Image Grid Section -->
+  <section class="container my-5">
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <img src="/images/page_one_1.png" alt="Image 1" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <img src="/images/page_one_2.png" alt="Image 2" class="img-fluid rounded shadow">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="/images/page_one_3.png" alt="Image 3" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-4">
+        <img src="/images/page_one_4.png" alt="Image 4" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-4">
+        <img src="/images/page_one_5.png" alt="Image 5" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </section>
+   <h3 class="middle-paragraph-section">
+      <div class="container">
+  Don’t wait until it’s too late—protect your land, your home, and your peace of mind. With wildfire season around the corner, there’s no better time to act. Call <strong>Bower Company</strong> today and let our experienced team take care of your weed abatement needs the right way. You’ll be glad you did.
+      </div>
+</h3>
+
+  <footer class="green-footer">
+    <h1>WE SPECIALIZE IN CLEARING OVERGROWN YARDS & VACANT LOTS.</h1>
+    <div class="locations">
+      OAKLAND &nbsp; ORINDA &nbsp; LAFAYETTE &nbsp; MORAGA &nbsp; WALNUT CREEK &nbsp; BERKELEY <br/>
+      KENSINGTON &nbsp; MILL VALLEY &nbsp; PIEDMONT &nbsp; ROSS &nbsp; TRUCKEE
+    </div>
+    <div class="description">
+      Bower Company provides professional brush clearing and yard cleanup throughout the East Bay area.
+    </div>
+    <div class="phone-number">
+      CALL (916) 206‑4059
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Bower Company • All Rights Reserved • Privacy Policy <br/>
+     
+    </div>
+  </footer>
+  <!-- JavaScript for dynamic year -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
